@@ -4,11 +4,9 @@
  
  This project is made with custom shaders and is utilizing Unity's Post Processing stack.
  
- I am experimenting with using ray marching to render signed distance functions in Unity.
+ Raymarching is a technique a bit like traditional raytracing where the surface function is not easy to solve (or impossible without numeric iterative methods). In raytracing you   just look up the ray intersection, whereas in ray marching you march forward (or back and forth) until you find the intersection, have enough samples or whatever it is you're trying to solve. So when you have complicated surfaces like fractals or non-euclidean geometry, raymarching is the way to go.
  
- Raymarching is a technique a bit like traditional raytracing where the surface function is not easy to solve (or impossible without numeric iterative methods). In raytracing you   just look up the ray intersection, whereas in ray marching you march forward (or back and forth) until you find the intersection, have enough samples or whatever it is you're trying to solve. So when you have complicated surfaces like fractals or non-euclidean geometry, raymarching is the way to go!
- 
-Here are some of my experiments using raymarching:
+Below are some of my experiments with using ray marching to render signed distance functions in Unity:
 
  - A Spacebulb
  <img src="/projectGIFS/ezgif-2-237dc5daaf3b.gif?raw=true">
