@@ -23,11 +23,14 @@ Here are some of my experiments using raymarching:
   <img src="/projectGIFS/ezgif-2-a169b1d8c624.gif?raw=true">
  
  - Blobthingies
-  <img src="/projectGIFS/ezgif-6-301bcffb1209.gif?raw=true">
  ** Simple geometric (with some displacement) scene showcasing some boolean operators
+  <img src="/projectGIFS/ezgif-6-301bcffb1209.gif?raw=true">
+ 
  
  - FractalFPS ???
+ ** I also managed to add some physics using the same signed distance fields that the gpu calculates in the shader but this time in the cpu.
   <img src="/projectGIFS/ezgif-3-6915a234aa2a.gif?raw=true">
   <img src="/projectGIFS/ezgif-3-ee71b35e15a7.gif?raw=true">
- ** I also managed to add some physics using the same signed distance fields that the gpu calculates in the shader but this time in the cpu.
+ 
+ Bonus: Here is a cool visualization of a mandelbulb fractal with some cool music: https://www.youtube.com/watch?v=_0YLEfMZloU ...wait for it... :)
  
