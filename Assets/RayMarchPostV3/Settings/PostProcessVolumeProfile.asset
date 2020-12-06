@@ -1,0 +1,2018 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7060726254709317113
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3284c03408087404299f8d4e6ccd3771, type: 3}
+  m_Name: RaymarchPostProcess
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  maxIterations:
+    overrideState: 1
+    value: 100
+  maxDistance:
+    overrideState: 1
+    value: 20
+  minDistance:
+    overrideState: 1
+    value: 0.001
+  lightCol:
+    overrideState: 1
+    value: {r: 0.9150943, g: 0.8575447, b: 0.45323068, a: 0}
+  lightIntensity:
+    overrideState: 1
+    value: 1
+  shadowIntensity:
+    overrideState: 1
+    value: 2.45
+  shadowDistance:
+    overrideState: 1
+    value: {x: 0.1, y: 100}
+  shadowPenumbra:
+    overrideState: 1
+    value: 128
+  aoStepSize:
+    overrideState: 1
+    value: 2.73
+  aoIntensity:
+    overrideState: 1
+    value: 0.296
+  aoIterations:
+    overrideState: 1
+    value: 3
+  reflectionCount:
+    overrideState: 0
+    value: 1
+  reflectionIntensity:
+    overrideState: 0
+    value: 0.374
+  envReflIntensity:
+    overrideState: 0
+    value: 0.387
+  reflectionCube:
+    overrideState: 1
+    value: {fileID: 8900000, guid: e4e7cd4fe19aeca4fbcb2ebd416799a4, type: 2}
+  groundColor:
+    overrideState: 1
+    value: {r: 0.3071256, g: 0.091224626, b: 0.4716981, a: 0}
+  sphereGradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 0.9926069, g: 1, b: 0, a: 1}
+      key1: {r: 1, g: 0.5952403, b: 0, a: 1}
+      key2: {r: 1, g: 0.12869696, b: 0, a: 0}
+      key3: {r: 1, g: 0, b: 0.57852983, a: 0}
+      key4: {r: 0.9202862, g: 0, b: 1, a: 0}
+      key5: {r: 0.26190662, g: 0, b: 1, a: 0}
+      key6: {r: 0.011764705, g: 0.4595296, b: 1, a: 0}
+      key7: {r: 0, g: 1, b: 0.77467656, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  boxGradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.26290405, b: 0, a: 1}
+      key1: {r: 0.27365124, g: 1, b: 0, a: 1}
+      key2: {r: 0, g: 0.45181608, b: 1, a: 0}
+      key3: {r: 0.94718194, g: 1, b: 0, a: 0}
+      key4: {r: 1, g: 0, b: 0.4570942, a: 0}
+      key5: {r: 0.7009859, g: 0, b: 1, a: 0}
+      key6: {r: 0.2652723, g: 0.011764705, b: 1, a: 0}
+      key7: {r: 0, g: 1, b: 0.24680638, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  mandelGradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 0.9926069, g: 1, b: 0, a: 1}
+      key1: {r: 1, g: 0.5952403, b: 0, a: 1}
+      key2: {r: 1, g: 0.12869696, b: 0, a: 0}
+      key3: {r: 1, g: 0, b: 0.57852983, a: 0}
+      key4: {r: 0.9202862, g: 0, b: 1, a: 0}
+      key5: {r: 0.26190662, g: 0, b: 1, a: 0}
+      key6: {r: 0.011764705, g: 0.4595296, b: 1, a: 0}
+      key7: {r: 0, g: 1, b: 0.77467656, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  colorIntensity:
+    overrideState: 1
+    value: 1
+  colorLerpTime:
+    overrideState: 1
+    value: 0.71
+  repeatable:
+    overrideState: 1
+    value: 1
+  sphere:
+    overrideState: 0
+    value: {x: 0, y: 3, z: 0, w: 2.01}
+  sphere1:
+    overrideState: 0
+    value: {x: 0, y: 3, z: 0, w: 1.51}
+  sphere2:
+    overrideState: 0
+    value: {x: 0, y: 3, z: 0, w: 1.51}
+  sphere3:
+    overrideState: 0
+    value: {x: 0, y: 3, z: 0, w: 1.51}
+  sphereSmooth:
+    overrideState: 0
+    value: 0.57
+  sphereIntersectSmooth:
+    overrideState: 0
+    value: 0.05
+  box:
+    overrideState: 0
+    value: {x: 0, y: 3, z: 0, w: 2.47}
+  boxRound:
+    overrideState: 0
+    value: 0.67
+  boxSphereSmooth:
+    overrideState: 0
+    value: 2.69
+  torus:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 3.67}
+  degreeRotate:
+    overrideState: 0
+    value: 100
+  dis:
+    overrideState: 0
+    value: 1.22
+  twist:
+    overrideState: 0
+    value: 0
+  onion:
+    overrideState: 0
+    value: 0.03
+  isModulor:
+    overrideState: 0
+    value: 0
+  modInterval:
+    overrideState: 1
+    value: {x: 10, y: 10, z: 10}
+  power:
+    overrideState: 0
+    value: 8
+  iterations:
+    overrideState: 0
+    value: 4
+  mandelbulb:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 2}
+  isMandelbox:
+    overrideState: 0
+    value: 0
+  scaleBox:
+    overrideState: 1
+    value: 3
+  foldingLimit:
+    overrideState: 1
+    value: 1
+  fixedRadius2:
+    overrideState: 1
+    value: 0.8
+  minRadius2:
+    overrideState: 1
+    value: 0.2
+  iterationsBox:
+    overrideState: 1
+    value: 8
+  boxBreathe:
+    overrideState: 0
+    value: 0
+  mandelbox:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 0}
+  sdfcompute:
+    overrideState: 0
+    value: {fileID: 7200000, guid: ac7cecb3f09e7bf42b174e6facda882d, type: 3}
+  skyboxTexture:
+    overrideState: 0
+    value: {fileID: 2800000, guid: 0d2da188072e432439cd1ae9a5fe2073, type: 3}
+    defaultState: 1
+  sphereColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  boxColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  mandelColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  colorIndexS: 0
+  colorIndexE: 1
+  t: 0
+  myTime: 0
+--- !u!114 &-6109335697269569527
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3284c03408087404299f8d4e6ccd3771, type: 3}
+  m_Name: RaymarchPostProcess
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  maxIterations:
+    overrideState: 1
+    value: 200
+  maxDistance:
+    overrideState: 1
+    value: 20
+  minDistance:
+    overrideState: 1
+    value: 0.001
+  lightCol:
+    overrideState: 1
+    value: {r: 0.8396226, g: 0.7243288, b: 0.34456214, a: 1}
+  lightIntensity:
+    overrideState: 1
+    value: 1
+  shadowIntensity:
+    overrideState: 1
+    value: 2.74
+  shadowDistance:
+    overrideState: 1
+    value: {x: 0.1, y: 100}
+  shadowPenumbra:
+    overrideState: 1
+    value: 128
+  aoStepSize:
+    overrideState: 1
+    value: 2.3
+  aoIntensity:
+    overrideState: 1
+    value: 0.312
+  aoIterations:
+    overrideState: 1
+    value: 3
+  reflectionCount:
+    overrideState: 0
+    value: 1
+  reflectionIntensity:
+    overrideState: 0
+    value: 0.761
+  envReflIntensity:
+    overrideState: 0
+    value: 0
+  reflectionCube:
+    overrideState: 0
+    value: {fileID: 8900000, guid: e4e7cd4fe19aeca4fbcb2ebd416799a4, type: 2}
+  groundColor:
+    overrideState: 1
+    value: {r: 0.5324265, g: 0.16313633, b: 0.735849, a: 0}
+  sphereGradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 0.9926069, g: 1, b: 0, a: 1}
+      key1: {r: 1, g: 0.5952403, b: 0, a: 1}
+      key2: {r: 1, g: 0.12869696, b: 0, a: 0}
+      key3: {r: 1, g: 0, b: 0.57852983, a: 0}
+      key4: {r: 0.9202862, g: 0, b: 1, a: 0}
+      key5: {r: 0.26190662, g: 0, b: 1, a: 0}
+      key6: {r: 0.011764705, g: 0.4595296, b: 1, a: 0}
+      key7: {r: 0, g: 1, b: 0.77467656, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  boxGradient:
+    overrideState: 1
+    value:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.26290405, b: 0, a: 1}
+      key1: {r: 0.27365124, g: 1, b: 0, a: 1}
+      key2: {r: 0, g: 0.45181608, b: 1, a: 0}
+      key3: {r: 0.94718194, g: 1, b: 0, a: 0}
+      key4: {r: 1, g: 0, b: 0.4570942, a: 0}
+      key5: {r: 0.7009859, g: 0, b: 1, a: 0}
+      key6: {r: 0.2652723, g: 0.011764705, b: 1, a: 0}
+      key7: {r: 0, g: 1, b: 0.24680638, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  mandelGradient:
+    overrideState: 0
+    value:
+      serializedVersion: 2
+      key0: {r: 0.51476586, g: 1, b: 0, a: 1}
+      key1: {r: 0, g: 1, b: 0.76483536, a: 1}
+      key2: {r: 0, g: 0.45181608, b: 1, a: 0}
+      key3: {r: 0.6676779, g: 0, b: 1, a: 0}
+      key4: {r: 1, g: 0, b: 0.4570942, a: 0}
+      key5: {r: 1, g: 0.48850012, b: 0, a: 0}
+      key6: {r: 1, g: 0.9514247, b: 0.011764705, a: 0}
+      key7: {r: 0.4737723, g: 1, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 8192
+      ctime2: 16384
+      ctime3: 24576
+      ctime4: 32768
+      ctime5: 40959
+      ctime6: 49151
+      ctime7: 57343
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 8
+      m_NumAlphaKeys: 2
+  colorIntensity:
+    overrideState: 1
+    value: 1
+  colorLerpTime:
+    overrideState: 0
+    value: 0.64
+  repeatable:
+    overrideState: 0
+    value: 1
+  sphere:
+    overrideState: 0
+    value: {x: 0, y: 2, z: 0, w: 2}
+  sphere1:
+    overrideState: 0
+    value: {x: 0, y: 2, z: 0, w: 2}
+  sphere2:
+    overrideState: 0
+    value: {x: 0, y: 2, z: 0, w: 2}
+  sphere3:
+    overrideState: 0
+    value: {x: 0, y: 2, z: 0, w: 2}
+  sphereSmooth:
+    overrideState: 0
+    value: 0
+  sphereIntersectSmooth:
+    overrideState: 0
+    value: 0
+  box:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 0}
+  boxRound:
+    overrideState: 0
+    value: 0
+  boxSphereSmooth:
+    overrideState: 0
+    value: 0
+  torus:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 0}
+  degreeRotate:
+    overrideState: 0
+    value: 500
+  dis:
+    overrideState: 0
+    value: 0
+  twist:
+    overrideState: 0
+    value: 0
+  onion:
+    overrideState: 0
+    value: 0
+  isModulor:
+    overrideState: 1
+    value: 0
+  modInterval:
+    overrideState: 1
+    value: {x: 10, y: 10, z: 10}
+  power:
+    overrideState: 0
+    value: 0
+  iterations:
+    overrideState: 0
+    value: 0
+  mandelbulb:
+    overrideState: 0
+    value: {x: 0, y: 0, z: 0, w: 0}
+  isMandelbox:
+    overrideState: 1
+    value: 1
+  scaleBox:
+    overrideState: 1
+    value: 3
+  foldingLimit:
+    overrideState: 1
+    value: 1
+  fixedRadius2:
+    overrideState: 1
+    value: 0.85
+  minRadius2:
+    overrideState: 1
+    value: 0.2
+  iterationsBox:
+    overrideState: 1
+    value: 8
+  boxBreathe:
+    overrideState: 1
+    value: 0
+  mandelbox:
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 0.7}
+  sdfcompute:
+    overrideState: 0
+    value: {fileID: 7200000, guid: ac7cecb3f09e7bf42b174e6facda882d, type: 3}
+  skyboxTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  sphereColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  boxColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  mandelColorVector:
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  - {x: 0, y: 0, z: 0, w: 0}
+  colorIndexS: 0
+  colorIndexE: 1
+  t: 0
+  myTime: 0
+--- !u!114 &-2579676736144315942
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 0
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  center:
+    overrideState: 1
+    value: {x: 0.5, y: 0.5}
+  intensity:
+    overrideState: 1
+    value: 0.372
+  smoothness:
+    overrideState: 1
+    value: 0.325
+  roundness:
+    overrideState: 1
+    value: 1
+  rounded:
+    overrideState: 0
+    value: 0
+  mask:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  opacity:
+    overrideState: 0
+    value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: PostProcessVolumeProfile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 6715423513429054284}
+  - {fileID: 8289544896780675134}
+  - {fileID: 986363292878783817}
+  - {fileID: -2579676736144315942}
+  - {fileID: -6109335697269569527}
+--- !u!114 &986363292878783817
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
+  m_Name: ColorGrading
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  gradingMode:
+    overrideState: 0
+    value: 1
+  externalLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  tonemapper:
+    overrideState: 0
+    value: 0
+  toneCurveToeStrength:
+    overrideState: 0
+    value: 0
+  toneCurveToeLength:
+    overrideState: 0
+    value: 0.5
+  toneCurveShoulderStrength:
+    overrideState: 0
+    value: 0
+  toneCurveShoulderLength:
+    overrideState: 0
+    value: 0.5
+  toneCurveShoulderAngle:
+    overrideState: 0
+    value: 0
+  toneCurveGamma:
+    overrideState: 0
+    value: 1
+  ldrLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 4
+  ldrLutContribution:
+    overrideState: 0
+    value: 1
+  temperature:
+    overrideState: 1
+    value: -100
+  tint:
+    overrideState: 0
+    value: 0
+  colorFilter:
+    overrideState: 1
+    value: {r: 0.8679245, g: 0.6167558, b: 0.3479886, a: 1}
+  hueShift:
+    overrideState: 0
+    value: 0
+  saturation:
+    overrideState: 0
+    value: 0
+  brightness:
+    overrideState: 0
+    value: 0
+  postExposure:
+    overrideState: 0
+    value: 0
+  contrast:
+    overrideState: 0
+    value: 0
+  mixerRedOutRedIn:
+    overrideState: 0
+    value: 100
+  mixerRedOutGreenIn:
+    overrideState: 0
+    value: 0
+  mixerRedOutBlueIn:
+    overrideState: 0
+    value: 0
+  mixerGreenOutRedIn:
+    overrideState: 0
+    value: 0
+  mixerGreenOutGreenIn:
+    overrideState: 0
+    value: 100
+  mixerGreenOutBlueIn:
+    overrideState: 0
+    value: 0
+  mixerBlueOutRedIn:
+    overrideState: 0
+    value: 0
+  mixerBlueOutGreenIn:
+    overrideState: 0
+    value: 0
+  mixerBlueOutBlueIn:
+    overrideState: 0
+    value: 100
+  lift:
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0}
+  gain:
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0}
+  masterCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      cachedData:
+      - 0
+      - 0.0078125
+      - 0.015625
+      - 0.0234375
+      - 0.03125
+      - 0.0390625
+      - 0.046875
+      - 0.0546875
+      - 0.0625
+      - 0.0703125
+      - 0.078125
+      - 0.0859375
+      - 0.09375
+      - 0.1015625
+      - 0.109375
+      - 0.1171875
+      - 0.125
+      - 0.1328125
+      - 0.140625
+      - 0.1484375
+      - 0.15625
+      - 0.1640625
+      - 0.171875
+      - 0.1796875
+      - 0.1875
+      - 0.1953125
+      - 0.203125
+      - 0.2109375
+      - 0.21875
+      - 0.2265625
+      - 0.234375
+      - 0.2421875
+      - 0.25
+      - 0.2578125
+      - 0.265625
+      - 0.2734375
+      - 0.28125
+      - 0.2890625
+      - 0.296875
+      - 0.3046875
+      - 0.3125
+      - 0.3203125
+      - 0.328125
+      - 0.3359375
+      - 0.34375
+      - 0.3515625
+      - 0.359375
+      - 0.3671875
+      - 0.375
+      - 0.3828125
+      - 0.390625
+      - 0.3984375
+      - 0.40625
+      - 0.4140625
+      - 0.421875
+      - 0.4296875
+      - 0.4375
+      - 0.4453125
+      - 0.453125
+      - 0.4609375
+      - 0.46875
+      - 0.4765625
+      - 0.484375
+      - 0.4921875
+      - 0.5
+      - 0.5078125
+      - 0.515625
+      - 0.5234375
+      - 0.53125
+      - 0.5390625
+      - 0.546875
+      - 0.5546875
+      - 0.5625
+      - 0.5703125
+      - 0.578125
+      - 0.5859375
+      - 0.59375
+      - 0.6015625
+      - 0.609375
+      - 0.6171875
+      - 0.625
+      - 0.6328125
+      - 0.640625
+      - 0.6484375
+      - 0.65625
+      - 0.6640625
+      - 0.671875
+      - 0.6796875
+      - 0.6875
+      - 0.6953125
+      - 0.703125
+      - 0.7109375
+      - 0.71875
+      - 0.7265625
+      - 0.734375
+      - 0.7421875
+      - 0.75
+      - 0.7578125
+      - 0.765625
+      - 0.7734375
+      - 0.78125
+      - 0.7890625
+      - 0.796875
+      - 0.8046875
+      - 0.8125
+      - 0.8203125
+      - 0.828125
+      - 0.8359375
+      - 0.84375
+      - 0.8515625
+      - 0.859375
+      - 0.8671875
+      - 0.875
+      - 0.8828125
+      - 0.890625
+      - 0.8984375
+      - 0.90625
+      - 0.9140625
+      - 0.921875
+      - 0.9296875
+      - 0.9375
+      - 0.9453125
+      - 0.953125
+      - 0.9609375
+      - 0.96875
+      - 0.9765625
+      - 0.984375
+      - 0.9921875
+  redCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      cachedData:
+      - 0
+      - 0.0078125
+      - 0.015625
+      - 0.0234375
+      - 0.03125
+      - 0.0390625
+      - 0.046875
+      - 0.0546875
+      - 0.0625
+      - 0.0703125
+      - 0.078125
+      - 0.0859375
+      - 0.09375
+      - 0.1015625
+      - 0.109375
+      - 0.1171875
+      - 0.125
+      - 0.1328125
+      - 0.140625
+      - 0.1484375
+      - 0.15625
+      - 0.1640625
+      - 0.171875
+      - 0.1796875
+      - 0.1875
+      - 0.1953125
+      - 0.203125
+      - 0.2109375
+      - 0.21875
+      - 0.2265625
+      - 0.234375
+      - 0.2421875
+      - 0.25
+      - 0.2578125
+      - 0.265625
+      - 0.2734375
+      - 0.28125
+      - 0.2890625
+      - 0.296875
+      - 0.3046875
+      - 0.3125
+      - 0.3203125
+      - 0.328125
+      - 0.3359375
+      - 0.34375
+      - 0.3515625
+      - 0.359375
+      - 0.3671875
+      - 0.375
+      - 0.3828125
+      - 0.390625
+      - 0.3984375
+      - 0.40625
+      - 0.4140625
+      - 0.421875
+      - 0.4296875
+      - 0.4375
+      - 0.4453125
+      - 0.453125
+      - 0.4609375
+      - 0.46875
+      - 0.4765625
+      - 0.484375
+      - 0.4921875
+      - 0.5
+      - 0.5078125
+      - 0.515625
+      - 0.5234375
+      - 0.53125
+      - 0.5390625
+      - 0.546875
+      - 0.5546875
+      - 0.5625
+      - 0.5703125
+      - 0.578125
+      - 0.5859375
+      - 0.59375
+      - 0.6015625
+      - 0.609375
+      - 0.6171875
+      - 0.625
+      - 0.6328125
+      - 0.640625
+      - 0.6484375
+      - 0.65625
+      - 0.6640625
+      - 0.671875
+      - 0.6796875
+      - 0.6875
+      - 0.6953125
+      - 0.703125
+      - 0.7109375
+      - 0.71875
+      - 0.7265625
+      - 0.734375
+      - 0.7421875
+      - 0.75
+      - 0.7578125
+      - 0.765625
+      - 0.7734375
+      - 0.78125
+      - 0.7890625
+      - 0.796875
+      - 0.8046875
+      - 0.8125
+      - 0.8203125
+      - 0.828125
+      - 0.8359375
+      - 0.84375
+      - 0.8515625
+      - 0.859375
+      - 0.8671875
+      - 0.875
+      - 0.8828125
+      - 0.890625
+      - 0.8984375
+      - 0.90625
+      - 0.9140625
+      - 0.921875
+      - 0.9296875
+      - 0.9375
+      - 0.9453125
+      - 0.953125
+      - 0.9609375
+      - 0.96875
+      - 0.9765625
+      - 0.984375
+      - 0.9921875
+  greenCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      cachedData:
+      - 0
+      - 0.0078125
+      - 0.015625
+      - 0.0234375
+      - 0.03125
+      - 0.0390625
+      - 0.046875
+      - 0.0546875
+      - 0.0625
+      - 0.0703125
+      - 0.078125
+      - 0.0859375
+      - 0.09375
+      - 0.1015625
+      - 0.109375
+      - 0.1171875
+      - 0.125
+      - 0.1328125
+      - 0.140625
+      - 0.1484375
+      - 0.15625
+      - 0.1640625
+      - 0.171875
+      - 0.1796875
+      - 0.1875
+      - 0.1953125
+      - 0.203125
+      - 0.2109375
+      - 0.21875
+      - 0.2265625
+      - 0.234375
+      - 0.2421875
+      - 0.25
+      - 0.2578125
+      - 0.265625
+      - 0.2734375
+      - 0.28125
+      - 0.2890625
+      - 0.296875
+      - 0.3046875
+      - 0.3125
+      - 0.3203125
+      - 0.328125
+      - 0.3359375
+      - 0.34375
+      - 0.3515625
+      - 0.359375
+      - 0.3671875
+      - 0.375
+      - 0.3828125
+      - 0.390625
+      - 0.3984375
+      - 0.40625
+      - 0.4140625
+      - 0.421875
+      - 0.4296875
+      - 0.4375
+      - 0.4453125
+      - 0.453125
+      - 0.4609375
+      - 0.46875
+      - 0.4765625
+      - 0.484375
+      - 0.4921875
+      - 0.5
+      - 0.5078125
+      - 0.515625
+      - 0.5234375
+      - 0.53125
+      - 0.5390625
+      - 0.546875
+      - 0.5546875
+      - 0.5625
+      - 0.5703125
+      - 0.578125
+      - 0.5859375
+      - 0.59375
+      - 0.6015625
+      - 0.609375
+      - 0.6171875
+      - 0.625
+      - 0.6328125
+      - 0.640625
+      - 0.6484375
+      - 0.65625
+      - 0.6640625
+      - 0.671875
+      - 0.6796875
+      - 0.6875
+      - 0.6953125
+      - 0.703125
+      - 0.7109375
+      - 0.71875
+      - 0.7265625
+      - 0.734375
+      - 0.7421875
+      - 0.75
+      - 0.7578125
+      - 0.765625
+      - 0.7734375
+      - 0.78125
+      - 0.7890625
+      - 0.796875
+      - 0.8046875
+      - 0.8125
+      - 0.8203125
+      - 0.828125
+      - 0.8359375
+      - 0.84375
+      - 0.8515625
+      - 0.859375
+      - 0.8671875
+      - 0.875
+      - 0.8828125
+      - 0.890625
+      - 0.8984375
+      - 0.90625
+      - 0.9140625
+      - 0.921875
+      - 0.9296875
+      - 0.9375
+      - 0.9453125
+      - 0.953125
+      - 0.9609375
+      - 0.96875
+      - 0.9765625
+      - 0.984375
+      - 0.9921875
+  blueCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0
+      m_Range: 1
+      cachedData:
+      - 0
+      - 0.0078125
+      - 0.015625
+      - 0.0234375
+      - 0.03125
+      - 0.0390625
+      - 0.046875
+      - 0.0546875
+      - 0.0625
+      - 0.0703125
+      - 0.078125
+      - 0.0859375
+      - 0.09375
+      - 0.1015625
+      - 0.109375
+      - 0.1171875
+      - 0.125
+      - 0.1328125
+      - 0.140625
+      - 0.1484375
+      - 0.15625
+      - 0.1640625
+      - 0.171875
+      - 0.1796875
+      - 0.1875
+      - 0.1953125
+      - 0.203125
+      - 0.2109375
+      - 0.21875
+      - 0.2265625
+      - 0.234375
+      - 0.2421875
+      - 0.25
+      - 0.2578125
+      - 0.265625
+      - 0.2734375
+      - 0.28125
+      - 0.2890625
+      - 0.296875
+      - 0.3046875
+      - 0.3125
+      - 0.3203125
+      - 0.328125
+      - 0.3359375
+      - 0.34375
+      - 0.3515625
+      - 0.359375
+      - 0.3671875
+      - 0.375
+      - 0.3828125
+      - 0.390625
+      - 0.3984375
+      - 0.40625
+      - 0.4140625
+      - 0.421875
+      - 0.4296875
+      - 0.4375
+      - 0.4453125
+      - 0.453125
+      - 0.4609375
+      - 0.46875
+      - 0.4765625
+      - 0.484375
+      - 0.4921875
+      - 0.5
+      - 0.5078125
+      - 0.515625
+      - 0.5234375
+      - 0.53125
+      - 0.5390625
+      - 0.546875
+      - 0.5546875
+      - 0.5625
+      - 0.5703125
+      - 0.578125
+      - 0.5859375
+      - 0.59375
+      - 0.6015625
+      - 0.609375
+      - 0.6171875
+      - 0.625
+      - 0.6328125
+      - 0.640625
+      - 0.6484375
+      - 0.65625
+      - 0.6640625
+      - 0.671875
+      - 0.6796875
+      - 0.6875
+      - 0.6953125
+      - 0.703125
+      - 0.7109375
+      - 0.71875
+      - 0.7265625
+      - 0.734375
+      - 0.7421875
+      - 0.75
+      - 0.7578125
+      - 0.765625
+      - 0.7734375
+      - 0.78125
+      - 0.7890625
+      - 0.796875
+      - 0.8046875
+      - 0.8125
+      - 0.8203125
+      - 0.828125
+      - 0.8359375
+      - 0.84375
+      - 0.8515625
+      - 0.859375
+      - 0.8671875
+      - 0.875
+      - 0.8828125
+      - 0.890625
+      - 0.8984375
+      - 0.90625
+      - 0.9140625
+      - 0.921875
+      - 0.9296875
+      - 0.9375
+      - 0.9453125
+      - 0.953125
+      - 0.9609375
+      - 0.96875
+      - 0.9765625
+      - 0.984375
+      - 0.9921875
+  hueVsHueCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 1
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+  hueVsSatCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 1
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+  satVsSatCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+  lumVsSatCurve:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 0
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+--- !u!114 &6715423513429054284
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 50
+  threshold:
+    overrideState: 1
+    value: 1
+  softKnee:
+    overrideState: 1
+    value: 1
+  clamp:
+    overrideState: 1
+    value: 65472
+  diffusion:
+    overrideState: 1
+    value: 2.53
+  anamorphicRatio:
+    overrideState: 1
+    value: 0
+  color:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
+--- !u!114 &8289544896780675134
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 0
+    value: {fileID: 8900000, guid: 97259d0c0ea9f491692be825da27978a, type: 3}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.253
+  fastMode:
+    overrideState: 0
+    value: 0

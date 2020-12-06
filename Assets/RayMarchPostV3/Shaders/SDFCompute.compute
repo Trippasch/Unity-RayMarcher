@@ -1,0 +1,135 @@
+﻿#pragma kernel CSMain
+
+RWTexture2D<float4> Result;
+float4x4 _CameraToWorld;
+float4x4 _CameraInverseProjection;
+float4x4 _CamFrustum;
+float4 _CamWorldSpace;
+
+Texture2D<float4> _SkyboxTexture;
+SamplerState sampler_SkyboxTexture;
+static const float PI = 3.14159265f;
+
+float3 _LightDir;
+float _LightIntensity;
+
+struct Ray
+{
+    float3 origin;
+    float3 direction;
+};
+
+Ray CreateRay(float3 origin, float3 direction)
+{
+    Ray ray;
+    ray.origin = origin;
+    ray.direction = direction;
+    return ray;
+}
+
+Ray CreateCameraRay(float2 uv)
+{
+    // Transform the camera origin to world space
+    float3 origin = mul(_CameraToWorld, float4(0.0f, 0.0f, 0.0f, 1.0f)).xyz;
+    
+    int index = (origin.x / 2) + origin.y;
+    // Invert the perspective projection of the view-space position
+    float3 direction = mul(_CameraInverseProjection, float4(uv, 0.0f, 1.0f)).xyz;
+    // Transform the direction from camera to world space and normalize
+    direction = mul(_CameraToWorld, float4(direction, 0.0f)).xyz;
+    direction = normalize(direction);
+    return CreateRay(origin, direction);
+}
+
+float4 opU(float4 d1, float4 d2)
+{
+    return (d1.w < d2.w) ? d1 : d2;
+}
+
+float sdPlane(float3 position, float4 n)
+{
+    // n must be normalized
+    return dot(position, n.xyz) + n.w;
+
+}
+
+float sphere (float3 p,float3 c,float r)
+{
+    return length (p-c)-r;
+}
+
+float mandelbulbSDF(float3 position, float bailout, float power, int iterations)
+{
+    float3 z = position;
+    float dr = 1.0;
+    float r = 0.0;
+    for (int i = 0; i < iterations; i++)
+    {
+        r = length(z);
+        if (r > bailout) break;
+
+        // convert to polar coordinates
+        float theta = acos(z.z/r);
+        float phi = atan2(z.y,z.x);
+        dr = pow(r, power - 1.0) * power * dr + 1.0;
+
+        // scale and rotate the point
+        float zr = pow(r, power);
+        theta = theta * power;
+        phi = phi * power;
+
+        // convert back to cartesian coordinates
+        z = zr * float3(sin(theta) * cos(phi), sin(phi) * sin(theta), cos(theta));
+        z += position;
+    }
+    return (0.5 * log(r) * r/dr);
+}
+ 
+float map (float3 p)
+{
+    return opU(mandelbulbSDF(p, 10.0, 12.0, 4), sphere(p,float3(2.0,2.0,2.0),1.0));
+}
+ 
+float3 set_normal (float3 p)
+{
+    float3 x = float3 (0.01,0.00,0.00);
+    float3 y = float3 (0.00,0.01,0.00);
+    float3 z = float3 (0.00,0.00,0.01);
+    return normalize(float3(map(p+x)-map(p-x), map(p+y)-map(p-y), map(p+z)-map(p-z)));
+}
+ 
+float3 lighting ( float3 p)
+{
+    float3 LightColor = float3 (1.0,1.0,1.0);
+    float3 NormalDirection = set_normal(p);
+    float3 light = (LightColor * dot(-_LightDir, NormalDirection) * 0.5 + 0.5) * _LightIntensity;
+    return light;
+}
+ 
+float4 raymarch (float3 ro,float3 rd)
+{
+    for (int i=0;i<128;i++)
+    {
+        float t = map(ro);
+        if (t<0.01) return float4(lighting(ro),1.0); else ro+=t*rd;
+    }
+    return float4(0.0,0.0,0.0,1.0);
+}
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    // Get the dimensions of the RenderTexture
+    uint width, height;
+    Result.GetDimensions(width, height);
+    // Transform pixel to [-1,1] range
+    float2 uv = float2((id.xy + float2(0.5f, 0.5f)) / float2(width, height) * 2.0f - 1.0f);
+    // Get a ray for the UVs
+    Ray ray = CreateCameraRay(uv);
+    float3 ro = ray.origin;
+    float3 rd = ray.direction;
+    // Sample the skybox and write it
+    float theta = acos(ray.direction.y) / -PI;
+    float phi = atan2(ray.direction.x, -ray.direction.z) / -PI * 0.5f;
+    Result[id.xy] = raymarch(ro, rd) + _SkyboxTexture.SampleLevel(sampler_SkyboxTexture, float2(phi, theta), 0);
+}
