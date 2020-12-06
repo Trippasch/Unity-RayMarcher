@@ -11,18 +11,23 @@
 Here are some of my experiments using raymarching:
 
  - A Spacebulb
+ <img src="/projectGIFS/ezgif-2-237dc5daaf3b.gif?raw=true">
  
  - A Glowbox
+  <img src="/projectGIFS/ezgif-2-2e093dd2b6d4.gif?raw=true">
  
  - A Shadedbox
+  <img src="/projectGIFS/ezgif-2-c74e57deeb1f.gif?raw=true">
  
  - A Fractalship
+  <img src="/projectGIFS/ezgif-2-a169b1d8c624.gif?raw=true">
  
  - Blobthingies
- 
+  <img src="/projectGIFS/ezgif-6-301bcffb1209.gif?raw=true">
  ** Simple geometric (with some displacement) scene showcasing some boolean operators
  
  - FractalFPS ???
- 
+  <img src="/projectGIFS/ezgif-3-6915a234aa2a.gif?raw=true">
+  <img src="/projectGIFS/ezgif-3-ee71b35e15a7.gif?raw=true">
  ** I also managed to add some physics using the same signed distance fields that the gpu calculates in the shader but this time in the cpu.
  
