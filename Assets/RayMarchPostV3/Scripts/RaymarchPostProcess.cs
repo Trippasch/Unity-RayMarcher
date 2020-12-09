@@ -291,7 +291,7 @@ public sealed class RaymarchPostProcessRenderer : PostProcessEffectRenderer<Raym
 
         // context.command.DispatchCompute(settings.sdfcompute, kernelid, threadGroupsX, threadGroupsY, 1);
         // context.command.BlitFullscreenTriangle(tempRT, context.destination);
-        context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 1);
+        context.command.BlitFullscreenTriangle(context.source, context.destination, sheet, 0);
     }
 
     private Matrix4x4 FrustumCorners(Camera cam)

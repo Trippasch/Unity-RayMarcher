@@ -26,6 +26,66 @@ float3 RotateZ(float3 p, float angle)
     return float3(c*p.x + s*p.y, -s*p.x + c*p.y, p.z);
 }
 
+float3 BounceY(float3 v, float angle)
+{
+    float s, c;
+    sincos(angle, s, c);
+    return float3(v.x, s * 4 + v.y - 1, v.z);
+}
+
+float3 BounceX(float3 v, float angle)
+{
+    float s, c;
+    sincos(angle, s, c);
+    return float3(sin(angle + (3 * 3.14) * 0.5) * 5 + v.x, v.y, v.z);
+}
+
+float3 BounceX3(float3 v, float angle)
+{
+    float s, c;
+    sincos(angle, s, c);
+    return float3(sin(angle + (3.14) * 0.5) * 5 + v.x, v.y, v.z);
+}
+
+// glowline pattern
+float2 pattern(float2 p)
+{
+    p = frac(p);
+    float r = 0.123;
+    float v = 0.0, g = 0.0;
+    r = frac(r * 9184.928);
+    float cp, d;
+    
+    d = p.x;
+    g += pow(clamp(1.0 - abs(d), 0.0, 1.0), 1000.0);
+    d = p.y;
+    g += pow(clamp(1.0 - abs(d), 0.0, 1.0), 1000.0);
+    d = p.x - 1.0;
+    g += pow(clamp(3.0 - abs(d), 0.0, 1.0), 1000.0);
+    d = p.y - 1.0;
+    g += pow(clamp(1.0 - abs(d), 0.0, 1.0), 10000.0);
+
+    const int ITER = 12;
+    for(int i = 0; i < ITER; i ++)
+    {
+        cp = 0.5 + (r - 0.5) * 0.9;
+        d = p.x - cp;
+        g += pow(clamp(1.0 - abs(d), 0.0, 1.0), 200.0);
+        if(d > 0.0) {
+            r = frac(r * 4829.013);
+            p.x = (p.x - cp) / (1.0 - cp);
+            v += 1.0;
+        }
+        else {
+            r = frac(r * 1239.528);
+            p.x = p.x / cp;
+        }
+        p = p.yx;
+    }
+    v /= float(ITER);
+    return float2(g, v);
+}
+
 // Sphere
 float sdSphere(float3 position, float3 origin, float radius)
 {
@@ -147,9 +207,9 @@ float opOnion(in float sdf, in float thickness)
     return abs(sdf) - thickness;
 }
 
-float mandelbulbSDF(float3 p, out float4 resColor, float4 origin, float power, int iterations, inout float glow)
+float mandelbulbSDF(float3 p, out float4 resColor, float power, int iterations, inout float glow)
 {
-	p.xyz = (p.xyz - origin.xyz) * origin.w * 0.5;
+	// p.xyz = (p.xyz - origin.xyz) * origin.w * 0.5;
 	float3 z = p;
 	float3 dz = float3(0.0, 0.0, 0.0);
 	float theta, phi;

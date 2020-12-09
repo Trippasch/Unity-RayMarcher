@@ -412,7 +412,7 @@ MonoBehaviour:
       m_NumColorKeys: 8
       m_NumAlphaKeys: 2
   mandelGradient:
-    overrideState: 0
+    overrideState: 1
     value:
       serializedVersion: 2
       key0: {r: 0.51476586, g: 1, b: 0, a: 1}
@@ -446,47 +446,47 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   colorLerpTime:
-    overrideState: 0
+    overrideState: 1
     value: 0.64
   repeatable:
-    overrideState: 0
+    overrideState: 1
     value: 1
   sphere:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere1:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere2:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere3:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0, y: 2, z: 0, w: 2}
   sphereSmooth:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.62
   sphereIntersectSmooth:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.02
   box:
-    overrideState: 0
-    value: {x: 0, y: 0, z: 0, w: 0}
+    overrideState: 1
+    value: {x: 0, y: 2, z: 0, w: 3.55}
   boxRound:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.8
   boxSphereSmooth:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 5.09
   torus:
-    overrideState: 0
-    value: {x: 0, y: 0, z: 0, w: 0}
+    overrideState: 1
+    value: {x: 0, y: 2, z: 0, w: 4.88}
   degreeRotate:
-    overrideState: 0
-    value: 500
+    overrideState: 1
+    value: 3
   dis:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.89
   twist:
     overrideState: 0
     value: 0
@@ -500,14 +500,14 @@ MonoBehaviour:
     overrideState: 1
     value: {x: 10, y: 10, z: 10}
   power:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 8
   iterations:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 4
   mandelbulb:
-    overrideState: 0
-    value: {x: 0, y: 0, z: 0, w: 0}
+    overrideState: 1
+    value: {x: 0, y: 0, z: 0, w: 1}
   isMandelbox:
     overrideState: 1
     value: 1
