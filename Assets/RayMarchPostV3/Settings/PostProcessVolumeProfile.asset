@@ -303,13 +303,13 @@ MonoBehaviour:
     value: 1
   maxIterations:
     overrideState: 1
-    value: 200
+    value: 100
   maxDistance:
     overrideState: 1
-    value: 20
+    value: 10
   minDistance:
     overrideState: 1
-    value: 0.001
+    value: 0.01
   lightCol:
     overrideState: 1
     value: {r: 0.8396226, g: 0.7243288, b: 0.34456214, a: 1}
@@ -317,22 +317,22 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   shadowIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 2.74
   shadowDistance:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.1, y: 100}
   shadowPenumbra:
-    overrideState: 1
+    overrideState: 0
     value: 128
   aoStepSize:
-    overrideState: 1
+    overrideState: 0
     value: 2.3
   aoIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0.312
   aoIterations:
-    overrideState: 1
+    overrideState: 0
     value: 3
   reflectionCount:
     overrideState: 0
@@ -347,10 +347,10 @@ MonoBehaviour:
     overrideState: 0
     value: {fileID: 8900000, guid: e4e7cd4fe19aeca4fbcb2ebd416799a4, type: 2}
   groundColor:
-    overrideState: 1
+    overrideState: 0
     value: {r: 0.5324265, g: 0.16313633, b: 0.735849, a: 0}
   sphereGradient:
-    overrideState: 1
+    overrideState: 0
     value:
       serializedVersion: 2
       key0: {r: 0.9926069, g: 1, b: 0, a: 1}
@@ -381,7 +381,7 @@ MonoBehaviour:
       m_NumColorKeys: 8
       m_NumAlphaKeys: 2
   boxGradient:
-    overrideState: 1
+    overrideState: 0
     value:
       serializedVersion: 2
       key0: {r: 1, g: 0.26290405, b: 0, a: 1}
@@ -412,7 +412,7 @@ MonoBehaviour:
       m_NumColorKeys: 8
       m_NumAlphaKeys: 2
   mandelGradient:
-    overrideState: 1
+    overrideState: 0
     value:
       serializedVersion: 2
       key0: {r: 0.51476586, g: 1, b: 0, a: 1}
@@ -446,46 +446,46 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   colorLerpTime:
-    overrideState: 1
+    overrideState: 0
     value: 0.64
   repeatable:
-    overrideState: 1
+    overrideState: 0
     value: 1
   sphere:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere1:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere2:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 2}
   sphere3:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 2}
   sphereSmooth:
-    overrideState: 1
+    overrideState: 0
     value: 0.62
   sphereIntersectSmooth:
-    overrideState: 1
+    overrideState: 0
     value: 0.02
   box:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 3.55}
   boxRound:
-    overrideState: 1
+    overrideState: 0
     value: 0.8
   boxSphereSmooth:
-    overrideState: 1
+    overrideState: 0
     value: 5.09
   torus:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 4.88}
   degreeRotate:
-    overrideState: 1
+    overrideState: 0
     value: 3
   dis:
-    overrideState: 1
+    overrideState: 0
     value: 0.89
   twist:
     overrideState: 0
@@ -494,19 +494,19 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   isModulor:
-    overrideState: 1
+    overrideState: 0
     value: 0
   modInterval:
-    overrideState: 1
+    overrideState: 0
     value: {x: 10, y: 10, z: 10}
   power:
-    overrideState: 1
+    overrideState: 0
     value: 8
   iterations:
-    overrideState: 1
+    overrideState: 0
     value: 4
   mandelbulb:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0, y: 0, z: 0, w: 1}
   isMandelbox:
     overrideState: 1
@@ -525,7 +525,7 @@ MonoBehaviour:
     value: 0.2
   iterationsBox:
     overrideState: 1
-    value: 8
+    value: 5
   boxBreathe:
     overrideState: 1
     value: 0
@@ -627,12 +627,10 @@ MonoBehaviour:
   m_Name: PostProcessVolumeProfile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 6715423513429054284}
   - {fileID: 8289544896780675134}
   - {fileID: 986363292878783817}
   - {fileID: -2579676736144315942}
   - {fileID: -6109335697269569527}
-  - {fileID: 4791827631497144071}
 --- !u!114 &986363292878783817
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1944,81 +1942,6 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &4791827631497144071
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
-  m_Name: DepthOfField
-  m_EditorClassIdentifier: 
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  focusDistance:
-    overrideState: 1
-    value: 10
-  aperture:
-    overrideState: 1
-    value: 5.6
-  focalLength:
-    overrideState: 1
-    value: 50
-  kernelSize:
-    overrideState: 1
-    value: 1
---- !u!114 &6715423513429054284
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
-  m_Name: Bloom
-  m_EditorClassIdentifier: 
-  active: 0
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 50
-  threshold:
-    overrideState: 1
-    value: 1
-  softKnee:
-    overrideState: 1
-    value: 1
-  clamp:
-    overrideState: 1
-    value: 65472
-  diffusion:
-    overrideState: 1
-    value: 2.53
-  anamorphicRatio:
-    overrideState: 1
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
-  fastMode:
-    overrideState: 0
-    value: 0
-  dirtTexture:
-    overrideState: 0
-    value: {fileID: 0}
-    defaultState: 1
-  dirtIntensity:
-    overrideState: 0
-    value: 0
 --- !u!114 &8289544896780675134
 MonoBehaviour:
   m_ObjectHideFlags: 3
