@@ -303,13 +303,13 @@ MonoBehaviour:
     value: 1
   maxIterations:
     overrideState: 1
-    value: 100
+    value: 200
   maxDistance:
     overrideState: 1
     value: 10
   minDistance:
     overrideState: 1
-    value: 0.01
+    value: 0.001
   lightCol:
     overrideState: 1
     value: {r: 0.8396226, g: 0.7243288, b: 0.34456214, a: 1}
@@ -317,22 +317,22 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   shadowIntensity:
-    overrideState: 0
+    overrideState: 1
     value: 2.74
   shadowDistance:
-    overrideState: 0
+    overrideState: 1
     value: {x: 0.1, y: 100}
   shadowPenumbra:
-    overrideState: 0
+    overrideState: 1
     value: 128
   aoStepSize:
-    overrideState: 0
+    overrideState: 1
     value: 2.3
   aoIntensity:
-    overrideState: 0
+    overrideState: 1
     value: 0.312
   aoIterations:
-    overrideState: 0
+    overrideState: 1
     value: 3
   reflectionCount:
     overrideState: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
     value: 0.2
   iterationsBox:
     overrideState: 1
-    value: 5
+    value: 8
   boxBreathe:
     overrideState: 1
     value: 0
