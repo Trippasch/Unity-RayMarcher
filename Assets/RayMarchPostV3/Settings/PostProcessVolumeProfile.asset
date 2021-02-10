@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8508565429037858546
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 1
+  threshold:
+    overrideState: 1
+    value: 1
+  softKnee:
+    overrideState: 1
+    value: 0.5
+  clamp:
+    overrideState: 1
+    value: 65472
+  diffusion:
+    overrideState: 1
+    value: 7
+  anamorphicRatio:
+    overrideState: 1
+    value: 0
+  color:
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 0
+    value: 0
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
 --- !u!114 &-7060726254709317113
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -315,15 +362,15 @@ MonoBehaviour:
     value: {r: 0.8396226, g: 0.7243288, b: 0.34456214, a: 1}
   lightIntensity:
     overrideState: 1
-    value: 1
+    value: 0.1
   shadowIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 2.74
   shadowDistance:
-    overrideState: 1
+    overrideState: 0
     value: {x: 0.1, y: 100}
   shadowPenumbra:
-    overrideState: 1
+    overrideState: 0
     value: 128
   aoStepSize:
     overrideState: 1
@@ -450,7 +497,7 @@ MonoBehaviour:
     value: 0.64
   repeatable:
     overrideState: 0
-    value: 1
+    value: 0
   sphere:
     overrideState: 0
     value: {x: 0, y: 2, z: 0, w: 2}
@@ -494,10 +541,10 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   isModulor:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 1
   modInterval:
-    overrideState: 0
+    overrideState: 1
     value: {x: 10, y: 10, z: 10}
   power:
     overrideState: 0
@@ -531,7 +578,7 @@ MonoBehaviour:
     value: 0
   mandelbox:
     overrideState: 1
-    value: {x: 0, y: 0, z: 0, w: 0.7}
+    value: {x: 0, y: 0, z: 0, w: 1}
   sdfcompute:
     overrideState: 0
     value: {fileID: 7200000, guid: ac7cecb3f09e7bf42b174e6facda882d, type: 3}
@@ -631,6 +678,7 @@ MonoBehaviour:
   - {fileID: 986363292878783817}
   - {fileID: -2579676736144315942}
   - {fileID: -6109335697269569527}
+  - {fileID: -8508565429037858546}
 --- !u!114 &986363292878783817
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -692,16 +740,16 @@ MonoBehaviour:
     overrideState: 1
     value: {r: 0.8679245, g: 0.6167558, b: 0.3479886, a: 1}
   hueShift:
-    overrideState: 0
+    overrideState: 1
     value: 0
   saturation:
-    overrideState: 0
+    overrideState: 1
     value: 0
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
+    overrideState: 1
     value: 0
   contrast:
     overrideState: 0

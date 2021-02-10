@@ -270,13 +270,13 @@
                 //------------------------------//
 
                 //------ Directional Light and shadows-------//
-                float3 dirLight = (_LightCol * clamp(dot(normalize(-_LightDir - p), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
-                float dirShadow = dirSoftShadow(p, -_LightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
-                dirShadow = max(0.0, pow(dirShadow, _ShadowIntensity));
+                // float3 dirLight = (_LightCol * clamp(dot(normalize(-_LightDir - p), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
+                // float dirShadow = dirSoftShadow(p, -_LightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
+                // dirShadow = max(0.0, pow(dirShadow, _ShadowIntensity));
                 //------------------------------//
 
                 // Ambient Light
-                // pDiffuse += 2.5 * _LightCol * (0.05 + 0.3 * _LightIntensity);
+                // pLight += 2.5 * _LightCol * (0.05 + 0.3 * _LightIntensity);
 
                 // Ambient Occlusion
                 float ao = ambientOcclusion(p, n);
@@ -291,28 +291,21 @@
                 // color = lerp( color, _GroundColor, clamp(pow(trap4.w,6.0),0.0,1.0) );
                 // color *= 0.5;
 
-                // Color fractal Mandelbox
-                // float3 color = c.rgb * _ColorIntensity * glowBox * 0.2;
-                // color = lerp(color, _GroundColor, clamp(trap.x*trap.x, 0.0, 1.0));
-                // color = lerp(color, _GroundColor, clamp(trap.y*trap.y, 0.0, 1.0));
-                // color = lerp(color, 0.1*_GroundColor, clamp(trap.z*trap.z, 0.0, 1.0));
-                // color *= 0.5;
-
                 // Color dichromatic Mandelbox
-                float3 color = _ColorIntensity;
+                float3 color = _ColorIntensity * glowBox * 0.1;
                 float ct=(abs(frac(trap*1.0)-0.5)*2.0)*0.35+0.65;
                 float ct2=abs(frac(trap*.071)-0.5)*2.0;
                 color*=lerp(fixed3(0.8,0.7,0.4)*ct,fixed3(0.7,0.15,0.2)*ct,ct2);
                 
                 // Calculate glowline
-                float glowline = 0.0;
-                float3 p3 = p;
-                p3 *= 2.0;
-                glowline += max((modc(length(p3) - _Time.y*3, 18.0) - 15.0)*6.7, 1.0);
-                float2 p2 = pattern(p3.xz *0.5);
-                if(p2.x<1.3) { glowline = 1.0; }
-                glowline += max(1.0-abs(dot(-UNITY_MATRIX_V[2].xyz, n)) - 0.4, 0.0) * 1.0;
-                float3 emmission = float3(0.7, 0.7, 1.0) * glowline * 1.0;
+                // float glowline = 0.0;
+                // float3 p3 = p;
+                // p3 *= 2.0;
+                // glowline += max((modc(length(p3) - _Time.y*3, 18.0) - 15.0)*6.7, 1.0);
+                // float2 p2 = pattern(p3.xz *0.5);
+                // if(p2.x<1.3) { glowline = 1.0; }
+                // glowline += max(1.0-abs(dot(-UNITY_MATRIX_V[2].xyz, n)) - 0.4, 0.0) * 1.0;
+                // float3 emmission = float3(0.7, 0.7, 1.0) * glowline * 1.0;
 
                 result = pLight * pShadow * color * ao * attenuation; // point light
                 // result = dirLight * dirShadow * color * ao; // directional light
