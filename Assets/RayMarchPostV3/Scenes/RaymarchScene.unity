@@ -1942,13 +1942,13 @@ MonoBehaviour:
   timeStep: 0.15
   timeToBeat: 0.05
   restSmoothTime: 2
-  postExpBeatScale: 2
+  postExpBeatScale: 3
   postExpRestScale: 0
   hueBeatScale: 0
   hueRestScale: 0
-  tempBeatScale: -100
+  tempBeatScale: -80
   tempRestScale: -100
-  saturateBeatScale: 0
+  saturateBeatScale: 10
   saturateRestScale: 0
   gammaBeatScale: {x: 0, y: 0, z: 0, w: 0}
   gammaRestScale: {x: 0, y: 0, z: 0, w: 0}
