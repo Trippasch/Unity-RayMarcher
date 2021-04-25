@@ -54,6 +54,8 @@ public sealed class RaymarchPostProcess : PostProcessEffectSettings
 
     [Header("Color")]
     public ColorParameter groundColor = new ColorParameter { };
+    public ColorParameter dichromaticColorMaj = new ColorParameter { };
+    public ColorParameter dichromaticColorMin = new ColorParameter { };
     public GradientParameter sphereGradient = new GradientParameter { };
     public GradientParameter boxGradient = new GradientParameter { };
     public GradientParameter mandelGradient = new GradientParameter { };
@@ -223,6 +225,8 @@ public sealed class RaymarchPostProcessRenderer : PostProcessEffectRenderer<Raym
         }
         // Color
         sheet.properties.SetColor("_GroundColor", settings.groundColor);
+        sheet.properties.SetColor("_DichromaticColorMaj", settings.dichromaticColorMaj);
+        sheet.properties.SetColor("_DichromaticColorMin", settings.dichromaticColorMin);
         sheet.properties.SetVectorArray("_SphereColor", settings.sphereColorVector);
         sheet.properties.SetVectorArray("_BoxColor", settings.boxColorVector);
         sheet.properties.SetVectorArray("_MandelColor", settings.mandelColorVector);

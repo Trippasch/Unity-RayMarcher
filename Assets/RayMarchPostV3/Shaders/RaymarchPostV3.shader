@@ -35,6 +35,8 @@
             float4 _Tint;
             // Color
             uniform fixed4 _GroundColor;
+            uniform fixed4 _DichromaticColorMaj;
+            uniform fixed4 _DichromaticColorMin;
             uniform fixed4 _SphereColor[8];
             uniform float _ColorIntensity;
             uniform fixed4 _BoxColor[8];
@@ -297,7 +299,7 @@
                 float3 color = _ColorIntensity;
                 float ct=(abs(frac(trap*1.0)-0.5)*2.0)*0.35+0.65;
                 float ct2=abs(frac(trap*.071)-0.5)*2.0;
-                color*=lerp(fixed3(0.8,0.7,0.4)*ct,fixed3(0.7,0.15,0.2)*ct,ct2);
+                color*=lerp(_DichromaticColorMaj*ct,_DichromaticColorMin*ct,ct2);
                 
                 // Calculate glowline
                 // float glowline = 0.0;
