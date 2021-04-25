@@ -362,10 +362,10 @@ MonoBehaviour:
     value: {r: 0.8396226, g: 0.7243288, b: 0.34456214, a: 1}
   lightIntensity:
     overrideState: 1
-    value: 0.1
+    value: 1
   shadowIntensity:
     overrideState: 0
-    value: 2.74
+    value: 1.12
   shadowDistance:
     overrideState: 0
     value: {x: 0.1, y: 100}
@@ -377,7 +377,7 @@ MonoBehaviour:
     value: 2.3
   aoIntensity:
     overrideState: 1
-    value: 0.312
+    value: 0.324
   aoIterations:
     overrideState: 1
     value: 3

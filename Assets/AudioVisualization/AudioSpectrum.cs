@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.WasapiAudio.Scripts.Unity;
 
 /// <summary>
 /// Mini "engine" for analyzing spectrum data
@@ -14,16 +15,20 @@ public class AudioSpectrum : MonoBehaviour
     // This value served to AudioSyncer for beat extraction
     public static float spectrumValue {get; private set;}
 
+    private GameObject wasapiGameObject;
+
     private void Start()
     {
         // initialize buffer
-        m_audioSpectrum = new float[128];
+        m_audioSpectrum = new float[32];
+        wasapiGameObject = GameObject.Find("Wasapi Loopback");
     }
 
     private void Update()
     {
         // get the data
-        AudioListener.GetSpectrumData(m_audioSpectrum, 0, FFTWindow.Hamming);
+        // AudioListener.GetSpectrumData(m_audioSpectrum, 0, FFTWindow.Hamming);
+        m_audioSpectrum = wasapiGameObject.gameObject.GetComponent<WasapiAudioSource>().GetSpectrumData();
 
         // assign spectrum value
         // this "engine" focuses on the simplicity of other classes only..

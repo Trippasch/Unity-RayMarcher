@@ -18,6 +18,7 @@ public class AudioSyncer : MonoBehaviour {
 
     private void Update()
     {
+        Debug.Log(AudioSpectrum.spectrumValue);
         OnUpdate();
     }
 
@@ -31,6 +32,7 @@ public class AudioSyncer : MonoBehaviour {
         // update audio value
         m_previousAudioValue = m_audioValue;
         m_audioValue = AudioSpectrum.spectrumValue;
+        // m_audioValue = AudioManager.amplitude;
 
         // if audio value went below the bias during this frame
         if (m_previousAudioValue > bias &&
@@ -58,7 +60,9 @@ public class AudioSyncer : MonoBehaviour {
     /// </summary>
     public virtual void OnBeat()
     {
-        Debug.Log("beat");
+        // Debug.Log("beat");
+        // Debug.Log("previous audioValue: " + m_previousAudioValue);
+        // Debug.Log("audioValue: " + m_audioValue);
         m_timer = 0;
         m_isBeat = true;
     }

@@ -261,22 +261,23 @@
                 float3 result;
 
                 //------- Point Light and shadows-----------//
-                float3 pointLightDir = _PointLightDir - p;
-                float pLight = (_LightCol * clamp(dot(normalize(pointLightDir), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
-                float d = distance(_PointLightDir, p);
-                float attenuation = 1 / d;
-                float pShadow = pSoftShadow(p, _PointLightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
-                pShadow = max(0.0, pow(pShadow, _ShadowIntensity));
+                // float3 pointLightDir = _PointLightDir - p;
+                // float pLight = (_LightCol * clamp(dot(normalize(pointLightDir), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
+                // float d = distance(_PointLightDir, p);
+                // float attenuation = 1 / d;
+                // float pShadow = pSoftShadow(p, _PointLightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
+                // pShadow = max(0.0, pow(pShadow, _ShadowIntensity));
                 //------------------------------//
 
                 //------ Directional Light and shadows-------//
-                // float3 dirLight = (_LightCol * clamp(dot(normalize(-_LightDir - p), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
-                // float dirShadow = dirSoftShadow(p, -_LightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
-                // dirShadow = max(0.0, pow(dirShadow, _ShadowIntensity));
+                float3 dirLight = (_LightCol * clamp(dot(normalize(-_LightDir - p), n), 0.0, 1.0) * 0.5 + 0.5) * _LightIntensity;
+                float dirShadow = dirSoftShadow(p, -_LightDir, _ShadowDistance.x, _ShadowDistance.y, _ShadowPenumbra, n) * 0.5 + 0.5;
+                dirShadow = max(0.0, pow(dirShadow, _ShadowIntensity));
                 //------------------------------//
 
                 // Ambient Light
                 // pLight += 2.5 * _LightCol * (0.05 + 0.3 * _LightIntensity);
+                // dirLight += 2.5 * _LightCol * (0.05 + 0.3 * _LightIntensity);
 
                 // Ambient Occlusion
                 float ao = ambientOcclusion(p, n);
@@ -292,7 +293,8 @@
                 // color *= 0.5;
 
                 // Color dichromatic Mandelbox
-                float3 color = _ColorIntensity * glowBox * 0.1;
+                // float3 color = _ColorIntensity * glowBox * 0.1; // with glow
+                float3 color = _ColorIntensity;
                 float ct=(abs(frac(trap*1.0)-0.5)*2.0)*0.35+0.65;
                 float ct2=abs(frac(trap*.071)-0.5)*2.0;
                 color*=lerp(fixed3(0.8,0.7,0.4)*ct,fixed3(0.7,0.15,0.2)*ct,ct2);
@@ -307,8 +309,8 @@
                 // glowline += max(1.0-abs(dot(-UNITY_MATRIX_V[2].xyz, n)) - 0.4, 0.0) * 1.0;
                 // float3 emmission = float3(0.7, 0.7, 1.0) * glowline * 1.0;
 
-                result = pLight * pShadow * color * ao * attenuation; // point light
-                // result = dirLight * dirShadow * color * ao; // directional light
+                // result = pLight * pShadow * color * ao * attenuation; // point light
+                result = dirLight * dirShadow * color * ao; // directional light
 
                 return result;
             }
