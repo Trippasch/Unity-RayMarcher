@@ -31,5 +31,5 @@ Below are some of my experiments with using ray marching to render signed distan
   <img src="/projectGIFS/ezgif-3-6915a234aa2a.gif?raw=true">
   <img src="/projectGIFS/ezgif-3-ee71b35e15a7.gif?raw=true">
  
- Bonus: Here is a cool visualization of a mandelbulb fractal with some cool music: https://www.youtube.com/watch?v=_0YLEfMZloU ...wait for it... :)
+ Bonus: Here is a cool music visualization of a mandelbulb fractal: https://www.youtube.com/watch?v=_0YLEfMZloU ...wait for it... :)
  
