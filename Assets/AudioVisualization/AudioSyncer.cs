@@ -18,7 +18,7 @@ public class AudioSyncer : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log(AudioSpectrum.spectrumValue);
+        // Debug.Log(AudioSpectrum.spectrumValue);
         OnUpdate();
     }
 
